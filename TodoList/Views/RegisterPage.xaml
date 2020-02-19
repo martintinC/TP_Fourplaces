@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<forms:BaseContentPage xmlns:forms="clr-namespace:Storm.Mvvm.Forms;assembly=Storm.Mvvm.Forms"
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TodoList.Views.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20,20,20,0">
+            <Label
+                TextColor="MediumBlue"
+                Text="Adresse mail" />
+            <Entry
+                Text="{Binding Mail}" />
+            <Label
+                TextColor="MediumBlue"
+                Text="Prenom" />
+            <Entry
+                Text="{Binding Prenom}" />
+            <Label
+                TextColor="MediumBlue"
+                Text="Nom" />
+            <Entry
+                Text="{Binding Nom}" />
+
+            <Label
+                TextColor="MediumBlue"
+                Text="Mot de passe" />
+            <Entry
+                Text="{Binding Mdp}" />
+
+            <Button
+                Command="{Binding RegisterCommand}"
+                Text="Valider"
+                BackgroundColor="YellowGreen"
+                IsEnabled="{Binding IsEnableButton}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</forms:BaseContentPage>
